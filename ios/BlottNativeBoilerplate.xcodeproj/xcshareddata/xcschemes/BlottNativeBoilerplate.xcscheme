@@ -15,23 +15,23 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "FridayApp.app"
-               BlueprintName = "FridayApp"
-               ReferencedContainer = "container:FridayApp.xcodeproj">
+               BuildableName = "BlottNativeBoilerplate.app"
+               BlueprintName = "BlottNativeBoilerplate"
+               ReferencedContainer = "container:BlottNativeBoilerplate.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "YES"
+            buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "FridayAppTests.xctest"
-               BlueprintName = "FridayAppTests"
-               ReferencedContainer = "container:FridayApp.xcodeproj">
+               BuildableName = "BlottNativeBoilerplateTests.xctest"
+               BlueprintName = "BlottNativeBoilerplateTests"
+               ReferencedContainer = "container:BlottNativeBoilerplate.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -59,9 +59,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "FridayApp.app"
-            BlueprintName = "FridayApp"
-            ReferencedContainer = "container:FridayApp.xcodeproj">
+            BuildableName = "BlottNativeBoilerplate.app"
+            BlueprintName = "BlottNativeBoilerplate"
+            ReferencedContainer = "container:BlottNativeBoilerplate.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -70,9 +70,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "FridayAppTests.xctest"
-               BlueprintName = "FridayAppTests"
-               ReferencedContainer = "container:FridayApp.xcodeproj">
+               BuildableName = "BlottNativeBoilerplateTests.xctest"
+               BlueprintName = "BlottNativeBoilerplateTests"
+               ReferencedContainer = "container:BlottNativeBoilerplate.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -92,9 +92,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "FridayApp.app"
-            BlueprintName = "FridayApp"
-            ReferencedContainer = "container:FridayApp.xcodeproj">
+            BuildableName = "BlottNativeBoilerplate.app"
+            BlueprintName = "BlottNativeBoilerplate"
+            ReferencedContainer = "container:BlottNativeBoilerplate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -109,9 +109,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "FridayApp.app"
-            BlueprintName = "FridayApp"
-            ReferencedContainer = "container:FridayApp.xcodeproj">
+            BuildableName = "BlottNativeBoilerplate.app"
+            BlueprintName = "BlottNativeBoilerplate"
+            ReferencedContainer = "container:BlottNativeBoilerplate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

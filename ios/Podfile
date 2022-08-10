@@ -3,7 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '11.0'
 
-target 'FridayApp' do
+target 'BlottNativeBoilerplate' do
   config = use_native_modules!
   use_react_native!(
     :path => config[:reactNativePath],
@@ -11,7 +11,7 @@ target 'FridayApp' do
     :hermes_enabled => false
   )
 
-  target 'FridayAppTests' do
+  target 'BlottNativeBoilerplateTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -23,15 +23,18 @@ target 'FridayApp' do
   use_flipper!()
 
   post_install do |installer|
-    react_native_post_install(installer)
-    __apply_Xcode_12_5_M1_post_install_workaround(installer)
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings["ONLY_ACTIVE_ARCH"] = "NO"
+      end
+    end
   end
 end
 
-# target 'FridayApp-tvOS' do
-#   # Pods for FridayApp-tvOS
+# target 'BlottNativeBoilerplate-tvOS' do
+#   # Pods for BlottNativeBoilerplate-tvOS
 
-#   target 'FridayApp-tvOSTests' do
+#   target 'BlottNativeBoilerplate-tvOSTests' do
 #     inherit! :complete
 #     # Pods for testing
 #   end
