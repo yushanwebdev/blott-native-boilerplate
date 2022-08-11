@@ -9,20 +9,23 @@ import * as Home from './home';
 import * as Settings from './settings';
 import * as Drawer from './drawer';
 import * as Dummy from './dummy';
+import { NativeBaseProvider } from 'native-base';
 
-const registerComponentWithRedux = (redux: any) => (
-  name: string,
-  screen: any,
-) => {
-  Navigation.registerComponent(
-    name,
-    () => (props: any) => (
-      <Provider store={redux.store}>
-        <screen.default {...props} />
-      </Provider>
-    ),
-    () => screen.default);
-};
+const registerComponentWithRedux =
+  (redux: any) => (name: string, screen: any) => {
+    Navigation.registerComponent(
+      name,
+      () => (props: any) =>
+        (
+          <NativeBaseProvider>
+            <Provider store={redux.store}>
+              <screen.default {...props} />
+            </Provider>
+          </NativeBaseProvider>
+        ),
+      () => screen.default,
+    );
+  };
 
 export function registerScreens(redux: any) {
   registerComponentWithRedux(redux)(SCREENS.Splash, Splash);
