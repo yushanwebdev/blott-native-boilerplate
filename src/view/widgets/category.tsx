@@ -1,12 +1,11 @@
 import * as React from 'react';
 import {View} from 'react-native';
 
-import {GLOBAL} from '../styles/global';
-import {CTEXT} from '../elements/custom';
-import locale from '../../constants/locale';
 import router from '../../navigators/router';
-import {Card, Carousel} from '../elements/layout';
 import {BUTTON_DEFAULT} from '../elements/buttons';
+import {CTEXT} from '../elements/custom';
+import {Card, Carousel} from '../elements/layout';
+import {GLOBAL} from '../styles/global';
 
 interface Props {
   componentId: string;
@@ -40,14 +39,14 @@ const Category: React.FC<Props> = ({componentId, title}: Props) => {
             )
           }
         />
-        <CTEXT style={GLOBAL.FONTS.body}>{item.title}</CTEXT>
+        <CTEXT style={GLOBAL.TEXT.body}>{item.title}</CTEXT>
       </View>
     );
   };
 
   return (
     <Card>
-      {title && <CTEXT style={GLOBAL.FONTS.h1}>{title}</CTEXT>}
+      {title && <CTEXT style={GLOBAL.TEXT.h1}>{title}</CTEXT>}
       <Carousel data={data} item={renderItem} />
     </Card>
   );

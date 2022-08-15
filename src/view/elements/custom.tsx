@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import {GLOBAL} from '../styles/global';
-import {TYPOGRAPHY} from '../styles/typography';
+import {THEME} from '../styles/theme';
 
 export interface TextProps {
   children: React.ReactElement | string;
@@ -35,7 +35,7 @@ const CTEXT: React.FC<TextProps> = (props: TextProps) => (
 const CTEXTINPUT: React.FC<TextInputProps> = (props: TextInputProps) => {
   const {
     style,
-    placeholderTextColor = TYPOGRAPHY.COLOR.Secondary,
+    placeholderTextColor = THEME.COLOR.Secondary,
     textInputRef,
     disabled = false,
     onSubmit,
@@ -51,7 +51,7 @@ const CTEXTINPUT: React.FC<TextInputProps> = (props: TextInputProps) => {
       placeholderTextColor={placeholderTextColor}
       underlineColorAndroid={'transparent'}
       onSubmitEditing={onSubmit}
-      style={[GLOBAL.TEXT_INPUT.Style.Default, style]}
+      style={[GLOBAL.INPUT.Style.Default, style]}
       autoCorrect={false}
     />
   );

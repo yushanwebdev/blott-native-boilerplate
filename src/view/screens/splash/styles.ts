@@ -1,13 +1,13 @@
 import {StyleSheet} from 'react-native';
 
-import {TYPOGRAPHY} from '../../styles/typography';
+import {THEME} from '../../styles/theme';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     display: 'flex',
     alignItems: 'center',
-    backgroundColor: TYPOGRAPHY.COLOR.Default,
+    backgroundColor: THEME.COLOR.Default,
   },
   image: {
     width: '70%',

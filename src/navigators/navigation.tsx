@@ -4,11 +4,11 @@
 import {Navigation} from 'react-native-navigation';
 
 import {SCREENS} from '../constants/screen';
-import {TYPOGRAPHY} from '../view/styles/typography';
+import {THEME} from '../view/styles/theme';
 
 export const STATUS_BAR_OPTIONS = {
   hideWithTopBar: true,
-  backgroundColor: TYPOGRAPHY.COLOR.StatusBar,
+  backgroundColor: THEME.COLOR.StatusBar,
 };
 
 export const showSplash = () => {
@@ -54,9 +54,9 @@ export const tabbedNavigation = () =>
                     bottomTab: {
                       fontSize: 14,
                       text: 'Home',
-                      textColor: TYPOGRAPHY.COLOR.Primary,
-                      selectedTextColor: TYPOGRAPHY.COLOR.Warning,
-                      selectedIconColor: TYPOGRAPHY.COLOR.Warning,
+                      textColor: THEME.COLOR.Primary,
+                      selectedTextColor: THEME.COLOR.Warning,
+                      selectedIconColor: THEME.COLOR.Warning,
                       icon: require('../view/assets/images/tabbar/home.png'),
                       selectedIcon: require('../view/assets/images/tabbar/home.png'),
                     },
@@ -81,9 +81,9 @@ export const tabbedNavigation = () =>
                     bottomTab: {
                       text: 'Settings',
                       fontSize: 14,
-                      textColor: TYPOGRAPHY.COLOR.Primary,
-                      selectedTextColor: TYPOGRAPHY.COLOR.Warning,
-                      selectedIconColor: TYPOGRAPHY.COLOR.Warning,
+                      textColor: THEME.COLOR.Primary,
+                      selectedTextColor: THEME.COLOR.Warning,
+                      selectedIconColor: THEME.COLOR.Warning,
                       icon: require('../view/assets/images/tabbar/settings.png'),
                       selectedIcon: require('../view/assets/images/tabbar/settings.png'),
                     },
