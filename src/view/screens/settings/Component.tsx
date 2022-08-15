@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { SafeAreaView, View } from 'react-native';
+import {SafeAreaView, View} from 'react-native';
 
-import { GLOBAL } from '../../styles/global';
+import {GLOBAL} from '../../styles/global';
 import {
   Actionsheet,
   AspectRatio,
@@ -22,7 +22,7 @@ export interface Props {}
 
 const SETTINGS: React.FC<Props> = (props: Props) => {
   const toast = useToast();
-  const { isOpen, onOpen, onClose } = useDisclose();
+  const {isOpen, onOpen, onClose} = useDisclose();
 
   return (
     <SafeAreaView style={GLOBAL.LAYOUT.SafeArea}>
@@ -44,7 +44,8 @@ const SETTINGS: React.FC<Props> = (props: Props) => {
             }}
             _light={{
               backgroundColor: 'gray.50',
-            }}>
+            }}
+          >
             <Box>
               <AspectRatio w="100%" ratio={16 / 9}>
                 <Image
@@ -67,7 +68,8 @@ const SETTINGS: React.FC<Props> = (props: Props) => {
                 position="absolute"
                 bottom="0"
                 px="3"
-                py="1.5">
+                py="1.5"
+              >
                 PHOTOS
               </Center>
             </Box>
@@ -86,7 +88,8 @@ const SETTINGS: React.FC<Props> = (props: Props) => {
                   }}
                   fontWeight="500"
                   ml="-0.5"
-                  mt="-1">
+                  mt="-1"
+                >
                   The Silicon Valley of India.
                 </Text>
               </Stack>
@@ -100,21 +103,24 @@ const SETTINGS: React.FC<Props> = (props: Props) => {
                   toast.show({
                     description: 'Hello world',
                   })
-                }>
+                }
+              >
                 Show Toast
               </Button>
               <Button onPress={onOpen}>Show Actionsheet</Button>
               <HStack
                 alignItems="center"
                 space={4}
-                justifyContent="space-between">
+                justifyContent="space-between"
+              >
                 <HStack alignItems="center">
                   <Text
                     color="coolGray.600"
                     _dark={{
                       color: 'warmGray.200',
                     }}
-                    fontWeight="400">
+                    fontWeight="400"
+                  >
                     6 mins ago
                   </Text>
                 </HStack>
@@ -129,7 +135,8 @@ const SETTINGS: React.FC<Props> = (props: Props) => {
                   color="gray.500"
                   _dark={{
                     color: 'gray.300',
-                  }}>
+                  }}
+                >
                   Albums
                 </Text>
               </Box>

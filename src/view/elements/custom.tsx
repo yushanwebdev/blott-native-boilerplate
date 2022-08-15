@@ -8,8 +8,8 @@ import {
   TextStyle,
 } from 'react-native';
 
-import { GLOBAL } from '../styles/global';
-import { TYPOGRAPHY } from '../styles/typography';
+import {GLOBAL} from '../styles/global';
+import {TYPOGRAPHY} from '../styles/typography';
 
 export interface TextProps {
   children: React.ReactElement | string;
@@ -57,4 +57,4 @@ const CTEXTINPUT: React.FC<TextInputProps> = (props: TextInputProps) => {
   );
 };
 
-export { CTEXT, CTEXTINPUT };
+export {CTEXT, CTEXTINPUT};

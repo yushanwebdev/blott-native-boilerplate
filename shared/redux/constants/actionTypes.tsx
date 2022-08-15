@@ -12,4 +12,4 @@ const ACTION_TYPES = {
   },
 };
 
-export { ACTION_TYPES };
+export {ACTION_TYPES};

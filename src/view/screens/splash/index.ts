@@ -1,10 +1,10 @@
-import { Dispatch } from 'redux';
-import { connect } from 'react-redux';
-import { ThunkDispatch } from 'redux-thunk';
+import {Dispatch} from 'redux';
+import {connect} from 'react-redux';
+import {ThunkDispatch} from 'redux-thunk';
 
 import Component from './Component';
-import { RootState } from '../../../../shared/redux/reducers';
-import { splashScreenLaunched } from '../../../../shared/redux/thunk/app';
+import {RootState} from '../../../../shared/redux/reducers';
+import {splashScreenLaunched} from '../../../../shared/redux/thunk/app';
 
 export interface Props {
   splashLaunched: () => (

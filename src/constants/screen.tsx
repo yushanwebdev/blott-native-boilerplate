@@ -9,4 +9,4 @@ const SCREENS = {
   Dummy: 'Dummy',
 };
 
-export { SCREENS };
+export {SCREENS};

@@ -6,6 +6,6 @@ export const HomeService = {
     return api
       .get(config.apis.search + encodeURI(searchTerm))
       .then(res => res.json())
-      .catch(err => Promise.resolve({ error: err }));
+      .catch(err => Promise.resolve({error: err}));
   },
 };

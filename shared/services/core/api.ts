@@ -1,5 +1,5 @@
 import config from '../../../src/config';
-import { jsonToQueryString } from '../utilities/lib';
+import {jsonToQueryString} from '../utilities/lib';
 
 const defaultHeaders = () => {
   return {

@@ -1,13 +1,13 @@
-import { Navigation } from 'react-native-navigation';
+import {Navigation} from 'react-native-navigation';
 
 import store from '../../shared/redux/store';
-import { registerScreens } from '../view/screens';
-import { showSplash } from './navigation';
+import {registerScreens} from '../view/screens';
+import {showSplash} from './navigation';
 
 /**
  * Register screens and components for react native navigation
  */
-registerScreens({ store });
+registerScreens({store});
 
 /**
  * Entry point for the app
@@ -21,7 +21,7 @@ const app = () => {
       /**
        * Add default options right here
        */
-      topBar: { visible: true, elevation: 0 },
+      topBar: {visible: true, elevation: 0},
     });
 
     showSplash();

@@ -1,10 +1,10 @@
 /**
  * Application navigation stacks to be defined here.
  */
-import { Navigation } from 'react-native-navigation';
+import {Navigation} from 'react-native-navigation';
 
-import { SCREENS } from '../constants/screen';
-import { TYPOGRAPHY } from '../view/styles/typography';
+import {SCREENS} from '../constants/screen';
+import {TYPOGRAPHY} from '../view/styles/typography';
 
 export const STATUS_BAR_OPTIONS = {
   hideWithTopBar: true,
@@ -14,7 +14,7 @@ export const STATUS_BAR_OPTIONS = {
 export const showSplash = () => {
   Navigation.setRoot({
     root: {
-      component: { name: SCREENS.Splash },
+      component: {name: SCREENS.Splash},
     },
   });
 };

@@ -1,5 +1,5 @@
-import { IAction } from '../types/IAction';
-import { ACTION_TYPES } from '../constants/actionTypes';
+import {IAction} from '../types/IAction';
+import {ACTION_TYPES} from '../constants/actionTypes';
 
 const initialState = {
   isLoading: true,

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { SafeAreaView, View } from 'react-native';
+import {SafeAreaView, View} from 'react-native';
 
-import { GLOBAL } from '../../styles/global';
-import { CTEXT } from '../../elements/custom';
+import {GLOBAL} from '../../styles/global';
+import {CTEXT} from '../../elements/custom';
 
 interface Props {}
 

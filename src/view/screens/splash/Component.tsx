@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { View, Image, SafeAreaView } from 'react-native';
+import {View, Image, SafeAreaView} from 'react-native';
 
 import styles from './styles';
-import { GLOBAL } from '../../styles/global';
-import { BUTTON_DEFAULT } from '../../elements/buttons';
-import { tabbedNavigation } from '../../../navigators/navigation';
+import {GLOBAL} from '../../styles/global';
+import {BUTTON_DEFAULT} from '../../elements/buttons';
+import {tabbedNavigation} from '../../../navigators/navigation';
 
-import { Props } from './index';
+import {Props} from './index';
 
 const SPLASH: React.FC<Props> = (props: Props) => {
   React.useEffect(() => {
-    const { splashLaunched } = props;
+    const {splashLaunched} = props;
     splashLaunched();
   }, []);
 

@@ -1,10 +1,10 @@
-import { Dispatch } from 'redux';
-import { connect } from 'react-redux';
-import { ThunkDispatch } from 'redux-thunk';
+import {Dispatch} from 'redux';
+import {connect} from 'react-redux';
+import {ThunkDispatch} from 'redux-thunk';
 
 import Component from './Component';
-import { RootState } from '../../../../shared/redux/reducers';
-import { loadHome } from '../../../../shared/redux/thunk/home';
+import {RootState} from '../../../../shared/redux/reducers';
+import {loadHome} from '../../../../shared/redux/thunk/home';
 
 export interface Props {
   name: string;

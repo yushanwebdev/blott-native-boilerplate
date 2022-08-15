@@ -51,8 +51,8 @@ const BUTTON = {
 };
 
 const ELEMENTS = {
-  CategoryIcons: { marginRight: 20 },
-  Card: { marginBottom: 30 },
+  CategoryIcons: {marginRight: 20},
+  Card: {marginBottom: 30},
 };
 
 const TYPOGRAPHY = {
@@ -62,4 +62,4 @@ const TYPOGRAPHY = {
   ELEMENTS,
 };
 
-export { TYPOGRAPHY };
+export {TYPOGRAPHY};

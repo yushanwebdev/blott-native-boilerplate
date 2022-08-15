@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
-import { ThunkDispatch } from 'redux-thunk';
+import {connect} from 'react-redux';
+import {ThunkDispatch} from 'redux-thunk';
 
 import Component from './Component';
-import { RootState } from '../../../../shared/redux/reducers';
+import {RootState} from '../../../../shared/redux/reducers';
 
 const mapStateToProps = (state: RootState) => ({
   app: state.app,

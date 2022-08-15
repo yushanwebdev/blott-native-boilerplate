@@ -7,7 +7,7 @@ import {
   ViewStyle,
 } from 'react-native';
 
-import { GLOBAL } from '../styles/global';
+import {GLOBAL} from '../styles/global';
 
 type Callback = () => any;
 interface Props {
@@ -24,12 +24,13 @@ interface CarouselProps {
 const Card: React.FC<Props> = (props: Props) => (
   <Pressable
     style={[GLOBAL.ELEMENTS.Card, props.style]}
-    onPress={props.onClick}>
+    onPress={props.onClick}
+  >
     {props.children}
   </Pressable>
 );
 
-const Carousel: React.FC<CarouselProps> = ({ data, item }: CarouselProps) => (
+const Carousel: React.FC<CarouselProps> = ({data, item}: CarouselProps) => (
   <FlatList
     keyExtractor={(_, index) =>
       `flatlist-${index}-${Math.floor(Math.random() * 100)}`
@@ -40,4 +41,4 @@ const Carousel: React.FC<CarouselProps> = ({ data, item }: CarouselProps) => (
   />
 );
 
-export { Card, Carousel };
+export {Card, Carousel};

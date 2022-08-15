@@ -1,4 +1,4 @@
-import { Action } from 'redux';
+import {Action} from 'redux';
 
 export interface IAction<T> extends Action {
   data?: T;
