@@ -14,11 +14,17 @@ const COLOR = {
 
 const FONT = {
   Primary: 'Helvetica',
+};
+
+const TEXT = {
   h1: {
     fontSize: 24,
     marginBottom: 10,
   },
-  input: {
+};
+
+const INPUT = {
+  base: {
     height: 36,
     fontSize: 14,
     borderWidth: 0.5,
@@ -55,11 +61,23 @@ const ELEMENTS = {
   Card: {marginBottom: 30},
 };
 
-const TYPOGRAPHY = {
-  COLOR,
-  FONT,
-  BUTTON,
-  ELEMENTS,
+const LAYOUT = {
+  pageContainer: {
+    padding: 16,
+  },
+  scrollViewInner: {
+    paddingBottom: 20,
+  },
 };
 
-export {TYPOGRAPHY};
+const THEME = {
+  COLOR,
+  FONT,
+  TEXT,
+  INPUT,
+  BUTTON,
+  ELEMENTS,
+  LAYOUT,
+};
+
+export {THEME};
