@@ -18,8 +18,7 @@ const BUTTON_DEFAULT: React.FC<Props> = ({ title, onClick, style }: Props) => (
   <TouchableOpacity
     activeOpacity={GLOBAL.CTA.TouchableOpacity.default}
     style={[GLOBAL.CTA.Style.primary, GLOBAL.LAYOUT.shadow, style]}
-    onPress={() => onClick()}
-  >
+    onPress={() => onClick()}>
     <CTEXT style={GLOBAL.CTA.Style.primaryText}>{title}</CTEXT>
   </TouchableOpacity>
 );

@@ -9,11 +9,10 @@ import { tabbedNavigation } from '../../../navigators/navigation';
 import { Props } from './index';
 
 const SPLASH: React.FC<Props> = (props: Props) => {
-
   React.useEffect(() => {
     const { splashLaunched } = props;
     splashLaunched();
-  },              []);
+  }, []);
 
   const navigateToHome = () => {
     tabbedNavigation();
@@ -31,10 +30,7 @@ const SPLASH: React.FC<Props> = (props: Props) => {
           resizeMode={'center'}
           source={require('../../assets/images/rn_ts.png')}
         />
-        <BUTTON_DEFAULT
-          title={'Continue To App'}
-          onClick={navigateToHome}
-        />
+        <BUTTON_DEFAULT title={'Continue To App'} onClick={navigateToHome} />
       </View>
     </SafeAreaView>
   );

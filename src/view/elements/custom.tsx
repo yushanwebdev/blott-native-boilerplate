@@ -1,6 +1,11 @@
 import * as React from 'react';
 import {
-  NativeSyntheticEvent, StyleProp, Text, TextInput, TextInputSubmitEditingEventData, TextStyle,
+  NativeSyntheticEvent,
+  StyleProp,
+  Text,
+  TextInput,
+  TextInputSubmitEditingEventData,
+  TextStyle,
 } from 'react-native';
 
 import { GLOBAL } from '../styles/global';
@@ -11,8 +16,9 @@ export interface TextProps {
   style?: StyleProp<TextStyle>;
 }
 
-type onSubmitEvent =
-  ({ nativeEvent }: NativeSyntheticEvent<TextInputSubmitEditingEventData>) => void;
+type onSubmitEvent = ({
+  nativeEvent,
+}: NativeSyntheticEvent<TextInputSubmitEditingEventData>) => void;
 export interface TextInputProps {
   style?: Object;
   value?: string;
@@ -23,9 +29,7 @@ export interface TextInputProps {
 }
 
 const CTEXT: React.FC<TextProps> = (props: TextProps) => (
-  <Text style={[GLOBAL.TEXT.Default, props.style]}>
-    {props.children}
-  </Text>
+  <Text style={[GLOBAL.TEXT.Default, props.style]}>{props.children}</Text>
 );
 
 const CTEXTINPUT: React.FC<TextInputProps> = (props: TextInputProps) => {

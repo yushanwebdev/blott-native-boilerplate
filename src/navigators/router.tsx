@@ -34,7 +34,11 @@ const showPushScreen = ({ componentId, passProps = {} }: INavigation) => {
  * Router method to show a screen by pushing on top of current stack
  * @param {object} params i.e {componentId is compulsory, passProps is optional},
  */
-const push = ({ componentId, passProps = {} }: INavigation, id: string, title?: string) => {
+const push = (
+  { componentId, passProps = {} }: INavigation,
+  id: string,
+  title?: string,
+) => {
   Navigation.push(componentId, {
     component: {
       name: id,
@@ -55,7 +59,10 @@ const push = ({ componentId, passProps = {} }: INavigation, id: string, title?: 
   });
 };
 
-const showListingsScreen = ({ componentId, passProps = {} }: INavigation, title?: string) => {
+const showListingsScreen = (
+  { componentId, passProps = {} }: INavigation,
+  title?: string,
+) => {
   push({ componentId, passProps }, SCREENS.Dummy, title);
 };
 
@@ -69,7 +76,8 @@ const dismissModal = ({ componentId }: INavigation) => {
 
 const pop = ({ componentId }: INavigation) => Navigation.pop(componentId);
 
-const popToRoot = ({ componentId }: INavigation) => Navigation.popToRoot(componentId);
+const popToRoot = ({ componentId }: INavigation) =>
+  Navigation.popToRoot(componentId);
 
 const ROUTER = {
   showPushScreen,

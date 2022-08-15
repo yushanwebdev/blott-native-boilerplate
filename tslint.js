@@ -2,9 +2,15 @@ const path = require('path');
 
 module.exports = {
   rulesDirectory: [
-    path.join(path.dirname(require.resolve('tslint-consistent-codestyle')), './'),
-    path.join(path.dirname(require.resolve('tslint-eslint-rules')), 'dist/rules'),
-    path.join(path.dirname(require.resolve('tslint-microsoft-contrib')), './')
+    path.join(
+      path.dirname(require.resolve('tslint-consistent-codestyle')),
+      './',
+    ),
+    path.join(
+      path.dirname(require.resolve('tslint-eslint-rules')),
+      'dist/rules',
+    ),
+    path.join(path.dirname(require.resolve('tslint-microsoft-contrib')), './'),
   ],
   rules: {
     // based on https://github.com/airbnb/javascript/tree/74fb34f08d4f1961169e9c37c9036a5b42aa7bf1
@@ -22,8 +28,8 @@ module.exports = {
       true,
       {
         anonymous: 'always', // 7.11
-        named: 'never' // 19.3
-      }
+        named: 'never', // 19.3
+      },
     ],
     'no-parameter-reassignment': true, // 7.12
     align: [true, 'arguments', 'parameters'], // 7.15
@@ -47,7 +53,7 @@ module.exports = {
       'check-decl', // 19.4
       'check-operator', // 19.4
       'check-preblock', // 19.2
-      'check-separator' // 19.14
+      'check-separator', // 19.14
     ],
     eofline: true, // 19.5
     'space-in-parens': [true, 'never'], // 19.9
@@ -64,8 +70,8 @@ module.exports = {
       {
         multiline: 'always',
         singleline: 'never',
-        esSpecCompliant: true
-      }
+        esSpecCompliant: true,
+      },
     ], // 20.2
     semicolon: [true, 'always'], // 21.1
     'no-construct': true, // 22.2, 22.3, 22.6
@@ -77,12 +83,12 @@ module.exports = {
         'method-regex': /^[a-z$][\w\d]+$/,
         'private-method-regex': /^[a-z$][\w\d]+$/,
         'protected-method-regex': /^[a-z$][\w\d]+$/,
-        'static-method-regex': /^[a-z$][\w\d]+$/
-      } // 23.1
+        'static-method-regex': /^[a-z$][\w\d]+$/,
+      }, // 23.1
     ],
     'variable-name': [true, 'check-format', 'allow-pascal-case'], // 23.2
     'class-name': true, // 23.3
     'no-this-assignment': [true, 'allow-destructuring'], // 23.5
-    'import-name': true // 23.6
-  }
+    'import-name': true, // 23.6
+  },
 };

@@ -1,10 +1,6 @@
 {
   "extends": "tslint-config-airbnb",
   "rules": {
-    "variable-name": [
-      true,
-      "allow-snake-case",
-      "allow-pascal-case"
-    ]
+    "variable-name": [true, "allow-snake-case", "allow-pascal-case"]
   }
 }

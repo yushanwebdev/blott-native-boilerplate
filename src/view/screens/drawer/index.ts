@@ -10,9 +10,6 @@ const mapStateToProps = (state: RootState) => ({
 
 const mapDispatchToProps = (dispatch: ThunkDispatch<{}, {}, any>) => ({});
 
-const drawerContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Component);
+const drawerContainer = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export default drawerContainer;

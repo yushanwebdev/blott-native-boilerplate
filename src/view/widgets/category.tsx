@@ -25,17 +25,19 @@ const data = [
 ];
 
 const Category: React.FC<Props> = ({ componentId, title }: Props) => {
-
   const renderItem = ({ item }: any) => {
     return (
-      <View style={GLOBAL.ELEMENTS.CategoryIcons} key={`carousel-item-${item.title}`}>
+      <View
+        style={GLOBAL.ELEMENTS.CategoryIcons}
+        key={`carousel-item-${item.title}`}>
         <BUTTON_DEFAULT
           title={item.title}
-          onClick={
-          () => router.showListingsScreen(
-            { componentId, passProps: { query: item.title } },
-            item.title,
-          )}
+          onClick={() =>
+            router.showListingsScreen(
+              { componentId, passProps: { query: item.title } },
+              item.title,
+            )
+          }
         />
         <CTEXT style={GLOBAL.FONTS.body}>{item.title}</CTEXT>
       </View>

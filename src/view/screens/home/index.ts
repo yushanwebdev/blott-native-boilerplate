@@ -9,20 +9,22 @@ import { loadHome } from '../../../../shared/redux/thunk/home';
 export interface Props {
   name: string;
   componentId: string;
-  loadHome: () => (dispatch: Dispatch<any>, getState: () => RootState) => Promise<void>;
+  loadHome: () => (
+    dispatch: Dispatch<any>,
+    getState: () => RootState,
+  ) => Promise<void>;
 }
 
 const mapStateToProps = (state: RootState) => ({
   app: state.app,
 });
 
-const mapDispatchToProps = (dispatch: ThunkDispatch<{}, {}, any>): Partial<Props> => ({
+const mapDispatchToProps = (
+  dispatch: ThunkDispatch<{}, {}, any>,
+): Partial<Props> => ({
   loadHome: () => dispatch(loadHome()),
 });
 
-const homeContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Component);
+const homeContainer = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export default homeContainer;

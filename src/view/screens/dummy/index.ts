@@ -13,11 +13,10 @@ const mapStateToProps = (state: RootState) => ({
   app: state.app,
 });
 
-const mapDispatchToProps = (dispatch: ThunkDispatch<{}, {}, any>): Partial<Props> => ({});
+const mapDispatchToProps = (
+  dispatch: ThunkDispatch<{}, {}, any>,
+): Partial<Props> => ({});
 
-const dummyContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Component);
+const dummyContainer = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export default dummyContainer;

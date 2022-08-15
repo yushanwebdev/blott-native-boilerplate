@@ -1,6 +1,11 @@
 import * as React from 'react';
 import { Navigation } from 'react-native-navigation';
-import { SafeAreaView, ScrollView, TouchableOpacity, Image } from 'react-native';
+import {
+  SafeAreaView,
+  ScrollView,
+  TouchableOpacity,
+  Image,
+} from 'react-native';
 
 import { GLOBAL } from '../../styles/global';
 import { Category } from '../../widgets/category';
@@ -26,7 +31,7 @@ class Home extends React.PureComponent<Props, State> {
 
   componentDidMount() {}
 
-  showBurgerMenu () {
+  showBurgerMenu() {
     Navigation.mergeOptions('drawerComponentId', {
       sideMenu: {
         left: {
@@ -44,7 +49,7 @@ class Home extends React.PureComponent<Props, State> {
         dummyText: 'Hello from Home !!!',
       },
     });
-  }
+  };
 
   render() {
     const { name } = this.state;
@@ -64,11 +69,15 @@ class Home extends React.PureComponent<Props, State> {
           <CTEXT>{locale.Home}</CTEXT>
           <CTEXT>{name}</CTEXT>
           <CTEXTINPUT />
-          <BUTTON_DEFAULT onClick={this.showPushScreen} title={'Push Screen'} style={{
-            alignSelf: 'center',
-            marginTop: 50,
-            width: 250,
-          }} />
+          <BUTTON_DEFAULT
+            onClick={this.showPushScreen}
+            title={'Push Screen'}
+            style={{
+              alignSelf: 'center',
+              marginTop: 50,
+              width: 250,
+            }}
+          />
         </ScrollView>
       </SafeAreaView>
     );
