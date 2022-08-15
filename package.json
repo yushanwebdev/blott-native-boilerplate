@@ -25,7 +25,10 @@
     "build:android:debug": "./gradlew assembleDebug",
     "build:android:release": "./gradlew assembleRelease",
     "lint": "cross-env-shell tslint --project ./tsconfig.json",
-    "lint:fix": "cross-env-shell tslint --fix --project ./tsconfig.json"
+    "lint:fix": "cross-env-shell tslint --fix --project ./tsconfig.json",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --check"
   },
   "dependencies": {
     "native-base": "^3.4.11",
