@@ -1,16 +1,16 @@
 import * as React from 'react';
 import {Image, SafeAreaView, View} from 'react-native';
+import {splashLaunched} from '../../../../shared/redux/actionCreators/app';
 
 import {tabbedNavigation} from '../../../navigators/navigation';
 import {ButtonDefault} from '../../elements/buttons';
 import {GLOBAL} from '../../styles/global';
 import styles from './styles';
 
-import {Props} from './index';
+interface Props {}
 
-const Splash: React.FC<Props> = props => {
+const Splash: React.FC<Props> = () => {
   React.useEffect(() => {
-    const {splashLaunched} = props;
     splashLaunched();
   }, []);
 

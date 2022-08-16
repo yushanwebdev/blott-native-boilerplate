@@ -1,16 +1,18 @@
-import {IAction} from '../types/IAction';
-import {ACTION_TYPES} from '../constants/actionTypes';
+import {AppActionType, IAppState, TAppAction} from '../actionTypes/app';
 
-const initialState = {
-  isLoading: true,
+const initialState: IAppState = {
+  isSplashLaunched: false,
 };
 
-export default (state = initialState, action: IAction<any>) => {
+export const appReducer = (
+  state: IAppState = initialState,
+  action: TAppAction,
+): IAppState => {
   switch (action.type) {
-    case ACTION_TYPES.SPLASH.SPLASH_LAUNCHED:
+    case AppActionType.SPLASH_LAUNCHED:
       return {
         ...state,
-        isLoading: false,
+        isSplashLaunched: true,
       };
     default:
       return state;

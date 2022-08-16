@@ -1,26 +1,38 @@
-import config from '../../../src/config';
+import {
+  IRequestBodyObj,
+  IRequestHeaderObj,
+  IRequestParamObj,
+} from '../utilities/interfaces/request';
 import {jsonToQueryString} from '../utilities/lib';
 
-const defaultHeaders = () => {
+const defaultHeaders = (otherHeaders?: IRequestParamObj) => {
   return {
-    Accept: 'application/json',
-    'x-host': config.apis.baseUrl,
     'Content-Type': 'application/json',
+    ...otherHeaders,
   };
 };
 
 const API = {
-  get: (endpoint: string, queryParam?: any) => {
-    return fetch(endpoint + jsonToQueryString(queryParam), {
+  get: (
+    endpoint: string,
+    queryParam?: IRequestParamObj,
+    otherHeaders?: IRequestHeaderObj,
+  ) => {
+    const query = queryParam ? jsonToQueryString(queryParam) : '';
+    return fetch(endpoint + query, {
       method: 'GET',
-      headers: defaultHeaders(),
+      headers: defaultHeaders(otherHeaders),
     });
   },
-  post: (endpoint: string, params: any) => {
+  post: (
+    endpoint: string,
+    body: IRequestBodyObj,
+    otherHeaders?: IRequestHeaderObj,
+  ) => {
     return fetch(endpoint, {
       method: 'POST',
-      headers: defaultHeaders(),
-      body: JSON.stringify(params),
+      headers: defaultHeaders(otherHeaders),
+      body: JSON.stringify(body),
     });
   },
 };

@@ -5,9 +5,13 @@
  */
 import {Navigation} from 'react-native-navigation';
 
-import {INavigation} from '../../shared/redux/types/INavigation';
 import {SCREENS} from '../constants/screen';
 import {STATUS_BAR_OPTIONS} from './navigation';
+
+interface INavigation {
+  componentId: string;
+  passProps?: object;
+}
 
 /**
  * Router method to show a screen by pushing on top of current stack

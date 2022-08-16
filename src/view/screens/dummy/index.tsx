@@ -4,7 +4,10 @@ import {SafeAreaView} from 'react-native';
 import {CText} from '../../elements/custom';
 import {GLOBAL} from '../../styles/global';
 
-import {Props} from './index';
+interface Props {
+  dummyText: string;
+  componentId?: string;
+}
 
 const Dummy: React.FC<Props> = props => (
   <SafeAreaView style={GLOBAL.LAYOUT.SafeArea}>
