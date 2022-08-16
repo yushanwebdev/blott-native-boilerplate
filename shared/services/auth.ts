@@ -1,5 +1,5 @@
+import {IUserSignIn} from '../utilities/interfaces/user';
 import API from './core/api';
-import {IUserSignIn} from './utilities/interfaces/user';
 
 export const AuthService = {
   signIn: async (baseURL: string, params: IUserSignIn) => {

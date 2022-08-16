@@ -2,8 +2,8 @@ import {
   IRequestBodyObj,
   IRequestHeaderObj,
   IRequestParamObj,
-} from '../utilities/interfaces/request';
-import {jsonToQueryString} from '../utilities/lib';
+} from '../../utilities/interfaces/request';
+import {jsonToQueryString} from '../../utilities/lib';
 
 const defaultHeaders = (otherHeaders?: IRequestParamObj) => {
   return {
