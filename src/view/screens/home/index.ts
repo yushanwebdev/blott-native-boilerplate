@@ -1,27 +1,30 @@
-import {Dispatch} from 'redux';
 import {connect} from 'react-redux';
+import {Dispatch} from 'redux';
 import {ThunkDispatch} from 'redux-thunk';
 
-import Component from './Component';
 import {RootState} from '../../../../shared/redux/reducers';
 import {loadHome} from '../../../../shared/redux/thunk/home';
+import Component from './Component';
 
-export interface Props {
-  name: string;
-  componentId: string;
+interface IStateToProps {}
+
+interface IDispatchToProps {
   loadHome: () => (
     dispatch: Dispatch<any>,
     getState: () => RootState,
   ) => Promise<void>;
 }
 
-const mapStateToProps = (state: RootState) => ({
-  app: state.app,
-});
+export interface Props extends IStateToProps, IDispatchToProps {
+  name: string;
+  componentId: string;
+}
+
+const mapStateToProps = (): IStateToProps => ({});
 
 const mapDispatchToProps = (
   dispatch: ThunkDispatch<{}, {}, any>,
-): Partial<Props> => ({
+): IDispatchToProps => ({
   loadHome: () => dispatch(loadHome()),
 });
 

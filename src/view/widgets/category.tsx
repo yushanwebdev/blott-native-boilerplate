@@ -2,8 +2,8 @@ import * as React from 'react';
 import {View} from 'react-native';
 
 import router from '../../navigators/router';
-import {BUTTON_DEFAULT} from '../elements/buttons';
-import {CTEXT} from '../elements/custom';
+import {ButtonDefault} from '../elements/buttons';
+import {CText} from '../elements/custom';
 import {Card, Carousel} from '../elements/layout';
 import {GLOBAL} from '../styles/global';
 
@@ -30,7 +30,7 @@ const Category: React.FC<Props> = ({componentId, title}: Props) => {
         style={GLOBAL.ELEMENTS.CategoryIcons}
         key={`carousel-item-${item.title}`}
       >
-        <BUTTON_DEFAULT
+        <ButtonDefault
           title={item.title}
           onClick={() =>
             router.showListingsScreen(
@@ -39,14 +39,14 @@ const Category: React.FC<Props> = ({componentId, title}: Props) => {
             )
           }
         />
-        <CTEXT style={GLOBAL.TEXT.body}>{item.title}</CTEXT>
+        <CText style={GLOBAL.TEXT.body}>{item.title}</CText>
       </View>
     );
   };
 
   return (
     <Card>
-      {title && <CTEXT style={GLOBAL.TEXT.h1}>{title}</CTEXT>}
+      {title && <CText style={GLOBAL.TEXT.h1}>{title}</CText>}
       <Carousel data={data} item={renderItem} />
     </Card>
   );

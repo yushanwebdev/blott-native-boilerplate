@@ -1,25 +1,31 @@
-import {Dispatch} from 'redux';
 import {connect} from 'react-redux';
+import {Dispatch} from 'redux';
 import {ThunkDispatch} from 'redux-thunk';
 
-import Component from './Component';
 import {RootState} from '../../../../shared/redux/reducers';
 import {splashScreenLaunched} from '../../../../shared/redux/thunk/app';
+import Component from './Component';
 
-export interface Props {
+interface IStateToProps {}
+
+interface IDispatchToProps {
   splashLaunched: () => (
     dispatch: Dispatch<any>,
     getState: () => RootState,
   ) => void;
 }
 
-const mapStateToProps = (state: RootState) => ({
+export interface Props extends IStateToProps, IDispatchToProps {
+  componentId: string;
+}
+
+const mapStateToProps = (state: RootState): IStateToProps => ({
   app: state.app,
 });
 
 const mapDispatchToProps = (
   dispatch: ThunkDispatch<{}, {}, any>,
-): Partial<Props> => ({
+): IDispatchToProps => ({
   splashLaunched: () => dispatch(splashScreenLaunched()),
 });
 

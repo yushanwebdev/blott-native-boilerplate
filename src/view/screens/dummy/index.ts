@@ -1,21 +1,19 @@
 import {connect} from 'react-redux';
-import {ThunkDispatch} from 'redux-thunk';
 
 import Component from './Component';
-import {RootState} from '../../../../shared/redux/reducers';
 
-export interface Props {
+interface IStateToProps {}
+
+interface IDispatchToProps {}
+
+export interface Props extends IStateToProps, IDispatchToProps {
   dummyText: string;
   componentId?: string;
 }
 
-const mapStateToProps = (state: RootState) => ({
-  app: state.app,
-});
+const mapStateToProps = (): IStateToProps => ({});
 
-const mapDispatchToProps = (
-  dispatch: ThunkDispatch<{}, {}, any>,
-): Partial<Props> => ({});
+const mapDispatchToProps = (): IDispatchToProps => ({});
 
 const dummyContainer = connect(mapStateToProps, mapDispatchToProps)(Component);
 

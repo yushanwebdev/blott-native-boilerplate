@@ -30,7 +30,7 @@ const Card: React.FC<Props> = (props: Props) => (
   </Pressable>
 );
 
-const Carousel: React.FC<CarouselProps> = ({data, item}: CarouselProps) => (
+const Carousel: React.FC<CarouselProps> = ({data, item}) => (
   <FlatList
     keyExtractor={(_, index) =>
       `flatlist-${index}-${Math.floor(Math.random() * 100)}`

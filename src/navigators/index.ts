@@ -15,7 +15,7 @@ registerScreens({store});
  *                 If you do not want a splash screen, directly call `tabbedNavigation()`
  *                 defined in './navigation'
  */
-const app = () => {
+const App = () => {
   Navigation.events().registerAppLaunchedListener(() => {
     Navigation.setDefaultOptions({
       /**
@@ -28,4 +28,4 @@ const app = () => {
   });
 };
 
-export default app;
+export default App;

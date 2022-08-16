@@ -1,14 +1,14 @@
 import * as React from 'react';
-import {View, Image, SafeAreaView} from 'react-native';
+import {Image, SafeAreaView, View} from 'react-native';
 
-import styles from './styles';
-import {GLOBAL} from '../../styles/global';
-import {BUTTON_DEFAULT} from '../../elements/buttons';
 import {tabbedNavigation} from '../../../navigators/navigation';
+import {ButtonDefault} from '../../elements/buttons';
+import {GLOBAL} from '../../styles/global';
+import styles from './styles';
 
 import {Props} from './index';
 
-const SPLASH: React.FC<Props> = (props: Props) => {
+const Splash: React.FC<Props> = props => {
   React.useEffect(() => {
     const {splashLaunched} = props;
     splashLaunched();
@@ -30,10 +30,10 @@ const SPLASH: React.FC<Props> = (props: Props) => {
           resizeMode={'center'}
           source={require('../../assets/images/rn_ts.png')}
         />
-        <BUTTON_DEFAULT title={'Continue To App'} onClick={navigateToHome} />
+        <ButtonDefault title={'Continue To App'} onClick={navigateToHome} />
       </View>
     </SafeAreaView>
   );
 };
 
-export default SPLASH;
+export default Splash;

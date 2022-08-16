@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {SafeAreaView, View} from 'react-native';
 
-import {GLOBAL} from '../../styles/global';
 import {
   Actionsheet,
   AspectRatio,
@@ -11,16 +10,16 @@ import {
   Heading,
   HStack,
   Image,
-  Slide,
   Stack,
   Text,
   useDisclose,
   useToast,
 } from 'native-base';
+import {GLOBAL} from '../../styles/global';
 
 export interface Props {}
 
-const SETTINGS: React.FC<Props> = (props: Props) => {
+const Settings: React.FC<Props> = () => {
   const toast = useToast();
   const {isOpen, onOpen, onClose} = useDisclose();
 
@@ -153,4 +152,4 @@ const SETTINGS: React.FC<Props> = (props: Props) => {
   );
 };
 
-export default SETTINGS;
+export default Settings;

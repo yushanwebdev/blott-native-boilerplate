@@ -1,13 +1,13 @@
 import * as React from 'react';
+import {Image, SafeAreaView, ScrollView, TouchableOpacity} from 'react-native';
 import {Navigation} from 'react-native-navigation';
-import {SafeAreaView, ScrollView, TouchableOpacity, Image} from 'react-native';
 
+import locale from '../../../constants/locale';
+import ROUTER from '../../../navigators/router';
+import {ButtonDefault} from '../../elements/buttons';
+import {CInput, CText} from '../../elements/custom';
 import {GLOBAL} from '../../styles/global';
 import {Category} from '../../widgets/category';
-import locale from '../../../constants/locale';
-import router from '../../../navigators/router';
-import {BUTTON_DEFAULT} from '../../elements/buttons';
-import {CTEXT, CTEXTINPUT} from '../../elements/custom';
 
 import {Props} from './index';
 
@@ -38,7 +38,7 @@ class Home extends React.PureComponent<Props, State> {
 
   showPushScreen = () => {
     const {componentId} = this.props;
-    router.showPushScreen({
+    ROUTER.showPushScreen({
       componentId,
       passProps: {
         dummyText: 'Hello from Home !!!',
@@ -61,10 +61,10 @@ class Home extends React.PureComponent<Props, State> {
             />
           </TouchableOpacity>
           <Category componentId={componentId} title={locale.Categories} />
-          <CTEXT>{locale.Home}</CTEXT>
-          <CTEXT>{name}</CTEXT>
-          <CTEXTINPUT />
-          <BUTTON_DEFAULT
+          <CText>{locale.Home}</CText>
+          <CText>{name}</CText>
+          <CInput />
+          <ButtonDefault
             onClick={this.showPushScreen}
             title={'Push Screen'}
             style={{

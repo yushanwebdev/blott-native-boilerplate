@@ -24,11 +24,12 @@
     "clean:android": "cd android && ./gradlew clean && ./gradlew :app:bundleRelease && cd ..",
     "build:android:debug": "./gradlew assembleDebug",
     "build:android:release": "./gradlew assembleRelease",
-    "lint": "cross-env-shell tslint --project ./tsconfig.json",
-    "lint:fix": "cross-env-shell tslint --fix --project ./tsconfig.json",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx)\"",
     "format": "npm run prettier -- --write",
-    "check-format": "npm run prettier -- --check"
+    "check-format": "npm run prettier -- --check",
+    "check-types": "npx tsc",
+    "validate": "npm run lint && npm run check-format && npm run check-types"
   },
   "dependencies": {
     "native-base": "^3.4.11",
