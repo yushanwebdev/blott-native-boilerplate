@@ -20,23 +20,6 @@ The project has been setup based off [RN+TS Boilerplate by Amit Mangal](https://
 
 ---
 
-### Supports React 17, React Native 0.66.0, React Native Navigation v7, Flipper and Hermes
-
-Update (Nov 2021):
-
-- Added Types (actions, reducers, store, components and more).
-- Core API service using fetch
-- Support for M1
-
-| Updates | RNN    | RN      | React   | Comments                         |
-| ------- | ------ | ------- | ------- | -------------------------------- |
-| Nov '21 | 7.23.1 | 0.66.0  | 17.0.2  | Type definitions                 |
-| May '21 | 7.14.0 | 0.64.1  | 17.0.1  | Update RN RNN, Hermes Support    |
-| Oct '20 | 7.1.0  | 0.63.3  | 16.13.1 | Support for Flipper              |
-| Apr '20 | 3.7.0  | 0.61.5  | 16.9.0  | Support for RN > 0.60, Android X |
-| Nov '19 | 2.26.2 | 0.59.10 |         | Maintenance                      |
-| Mar '19 | 2.13.1 | 0.58.6  | 16.8.4  |
-
 ## Introduction
 
 Jumpstart building robust apps using React Native and TypeScript with most commoly needed tools already setup. Just `yarn install` and get going from respective IDEs.
@@ -51,7 +34,7 @@ Jumpstart building robust apps using React Native and TypeScript with most commo
 - **Atomic Design pattern**
   - The structure of the app is inspired by [atomic design pattern](https://atomicdesign.bradfrost.com/chapter-2/).
   - Widgets / Elements: Build your own **Design Language System** with these building blocks.
-    - **Typography**: Base Typography setup - Color, Font, LAYOUT, CTA, FONTS, TEXT, TEXT_INPUT
+    - **Theme**: Base Typography setup - Color, Font, LAYOUT, BUTTONS, FONTS, TEXT, INPUT
     - **elements**: `<BUTTON_DEFAULT>` or `<CTEXT>`. They are custom elements that have default properties like font, size and so on.
     ```typescript
     <CTEXT style={GLOBAL.CTA.Style.primaryText}>{title}</CTEXT>
@@ -86,8 +69,6 @@ Jumpstart building robust apps using React Native and TypeScript with most commo
   - [Renaming the App](#renaming-the-app)
   - [iOS Launch Screen](#ios-launch-screen)
   - [Android Launch Screen](#android-launch-screen)
-- [Contributing](#contributing)
-- [TODO](#todo)
 
 ### Project Structure
 
@@ -110,7 +91,7 @@ Jumpstart building robust apps using React Native and TypeScript with most commo
 │   ├── config					Global Configuration
 │   ├── constants				Screen names and ids, Localization
 │   ├── navigators				Router, Navigation
-│   ├── view					UI compoments
+│   ├── view					UI components
 │   │   ├── elements				Custom elements
 │   │   ├── assets
 │   │   ├── screens
@@ -135,7 +116,7 @@ Presentation layer for the app - screens, styles, images, icons etc.
 
 ### Getting Started
 
-Make sure node version installed is `>=12.x.x`. Then install using yarn (or npm):
+Make sure node version installed is `>=18.x.x`. Then install using yarn (or npm):
 
 ```
 yarn install
@@ -247,15 +228,3 @@ You might also want to rename the app for your own use. Follow any of the links 
 Or
 
 - NPM Package: [react-native-rename](https://www.npmjs.com/package/react-native-rename)
-
-### Contributing
-
-Please check out [Contributing](https://github.com/AmitM30/react-native-typescript-boilerplate/blob/master/CONTRIBUTING.md).
-
-### Authors
-
-- [**Anurag Chutani**](https://github.com/a7urag) - _Android Setup_
-- [**Brian Varley**](https://github.com/BrianJVarley) - _Windows Setup_
-- [**Nelson Omuto**](https://github.com/nelsonomuto) - _Update Podfile_
-
-See also the list of [contributors](https://github.com/AmitM30/react-native-typescript-boilerplate/contributors).
